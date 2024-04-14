@@ -7,6 +7,7 @@ const program = new Command();
 
 // Aadd actions onth that CLI
 program
+    .command("greet <string>")
     .argument("<string>", "string to greet")
     .option("-c, --capitalize", "capitalize string")
     .action((name: string, opts: {capitalize: boolean}) => {
