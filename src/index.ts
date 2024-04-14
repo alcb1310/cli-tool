@@ -1,6 +1,14 @@
 #! /usr/bin/env node
 
-const hello = (message: string) => {
-}
+import {Command} from "commander";
 
-console.log("Wow!!!!!!!");
+// Declare the progarm
+const program = new Command();
+
+// Aadd actions onth that CLI
+program.action(() => {
+    console.log("Hello World");
+}).description("Prints Hello World");
+
+// Excecute the CLI with the arguments
+program.parse(process.argv);
